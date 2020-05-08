@@ -51,7 +51,95 @@ for(let i = 1; i < 26; i++){
 }
 //  /\  setup stuff  /\
 
-
+//  \/  movement  \/
 let move = (tile) => {
-    document.getElementById(tile).style.marginTop = '400px'
+    tile = document.getElementById(tile)
+
+    let y = tile.style.marginTop
+    y = y.split('')
+    y.pop()
+    y.pop()
+    y = y.join('')
+    yplus = +y+100+'px'
+    yminus = +y-100+'px'
+
+    let x = tile.style.marginLeft
+    x = x.split('')
+    x.pop()
+    x.pop()
+    x = x.join('')
+    xplus = +x+100+'px'
+    xminus = +x-100+'px'
+
+    
+    // \/  empty space check  \/
+    // let slide = true
+    // for(let i = 1; i < 26; i++){
+    //     for(let j = 1; j < 25; j++){
+    //         if(xminus === document.getElementById(`sp-${i}`).style.marginLeft  && tile.style.marginTop === document.getElementById(`sp-${i}`).style.marginTop  && xminus === document.getElementById(`tile-${j}`).style.marginLeft && tile.style.marginTop === document.getElementById(`tile-${j}`).style.marginTop){
+    //             slide = false
+    //         }
+    //     }
+    // }
+    // /\  empty space check  /\
+    let right = true
+    let left = true
+    let up = true
+    let down = true
+    let bright = false
+    let bleft = false
+    let bup = false
+    let bdown = false
+    for(let i = 1; i < 26; i++){
+        for(let j = 1; j < 25; j++){
+            if(xplus === document.getElementById(`sp-${i}`).style.marginLeft  && 
+            tile.style.marginTop === document.getElementById(`sp-${i}`).style.marginTop){
+                bright = true
+                if(document.getElementById(`sp-${i}`).style.marginLeft === document.getElementById(`tile-${j}`).style.marginLeft && 
+                document.getElementById(`sp-${i}`).style.marginTop === document.getElementById(`tile-${j}`).style.marginTop){
+                    right = false
+                }
+            }
+
+            if(xminus === document.getElementById(`sp-${i}`).style.marginLeft  && 
+            tile.style.marginTop === document.getElementById(`sp-${i}`).style.marginTop){
+                bleft = true
+                if(document.getElementById(`sp-${i}`).style.marginLeft === document.getElementById(`tile-${j}`).style.marginLeft && 
+                document.getElementById(`sp-${i}`).style.marginTop === document.getElementById(`tile-${j}`).style.marginTop){
+                    left = false
+                }
+            }
+
+            if(tile.style.marginLeft === document.getElementById(`sp-${i}`).style.marginLeft  && 
+            yplus === document.getElementById(`sp-${i}`).style.marginTop){
+                bdown = true
+                if(document.getElementById(`sp-${i}`).style.marginLeft === document.getElementById(`tile-${j}`).style.marginLeft && 
+                document.getElementById(`sp-${i}`).style.marginTop === document.getElementById(`tile-${j}`).style.marginTop){
+                    down = false
+                }
+            }
+
+            if(tile.style.marginLeft === document.getElementById(`sp-${i}`).style.marginLeft  && 
+            yminus === document.getElementById(`sp-${i}`).style.marginTop){
+                bup = true
+                if(document.getElementById(`sp-${i}`).style.marginLeft === document.getElementById(`tile-${j}`).style.marginLeft && 
+                document.getElementById(`sp-${i}`).style.marginTop === document.getElementById(`tile-${j}`).style.marginTop){
+                    up = false
+                }
+            }
+        }
+    }
+    if(up && bup){
+        tile.style.marginTop = yminus
+    }
+    if(down && bdown){
+        tile.style.marginTop = yplus
+    }
+    if(left && bleft){
+        tile.style.marginLeft = xminus
+    }
+    if(right && bright){
+        tile.style.marginLeft = xplus
+    }
 }
+//  /\  movement  /\
