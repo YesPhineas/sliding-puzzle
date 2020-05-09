@@ -135,7 +135,29 @@ let move = (tile) => {
 //  /\  movement  /\
 
 //  \/  shuffle  \/
-let shuffle = () =>{
-    
+let shuffle = (x) =>{
+    for(let a = 0; a < x; a++){
+        //  \/  check for free space  \/
+        for(let i = 1; i < 26; i++){
+            let occupied = false
+            for(let j = 1; j < 25; j++){
+                if(document.getElementById(`sp-${i}`).style.marginTop === document.getElementById(`tile-${j}`).style.marginTop && 
+                document.getElementById(`sp-${i}`).style.marginLeft === document.getElementById(`tile-${j}`).style.marginLeft){
+                    occupied = true
+                }
+            }
+            if(occupied === false){
+                let space = document.getElementById(`sp-${i}`)
+                console.log(`sp-${i}`)
+            }
+        }
+        //  /\  check for free space  /\
+
+        // for(let i = 1; i < 26; i++){
+        //     for(let j = 1; j < 25; j++){
+
+        //     }
+        // }
+    }
 }
 //  /\  shuffle  /\
