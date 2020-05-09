@@ -4,13 +4,19 @@
     cursor: default;
 }
 
+#button-bill{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #board{
     width: 500px;
     height: 500px;
     background: green;
     border: 5px solid black;
     margin: auto auto;
-    margin-top: 100px;
 }
 
 .tile{

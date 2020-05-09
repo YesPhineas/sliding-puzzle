@@ -71,17 +71,6 @@ let move = (tile) => {
     xplus = +x+100+'px'
     xminus = +x-100+'px'
 
-    
-    // \/  empty space check  \/
-    // let slide = true
-    // for(let i = 1; i < 26; i++){
-    //     for(let j = 1; j < 25; j++){
-    //         if(xminus === document.getElementById(`sp-${i}`).style.marginLeft  && tile.style.marginTop === document.getElementById(`sp-${i}`).style.marginTop  && xminus === document.getElementById(`tile-${j}`).style.marginLeft && tile.style.marginTop === document.getElementById(`tile-${j}`).style.marginTop){
-    //             slide = false
-    //         }
-    //     }
-    // }
-    // /\  empty space check  /\
     let right = true
     let left = true
     let up = true
@@ -129,6 +118,7 @@ let move = (tile) => {
             }
         }
     }
+
     if(up && bup){
         tile.style.marginTop = yminus
     }
@@ -143,3 +133,9 @@ let move = (tile) => {
     }
 }
 //  /\  movement  /\
+
+//  \/  shuffle  \/
+let shuffle = () =>{
+    
+}
+//  /\  shuffle  /\
