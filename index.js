@@ -215,7 +215,7 @@ let shuffle = (x) =>{
                 }
             }
             //  /\  select and move tile  /\
-        }, 1000)
+        }, a*2)
     }
 }
 //  /\  shuffle  /\
