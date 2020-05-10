@@ -137,27 +137,86 @@ let move = (tile) => {
 //  \/  shuffle  \/
 let shuffle = (x) =>{
     for(let a = 0; a < x; a++){
-        //  \/  check for free space  \/
-        for(let i = 1; i < 26; i++){
-            let occupied = false
-            for(let j = 1; j < 25; j++){
-                if(document.getElementById(`sp-${i}`).style.marginTop === document.getElementById(`tile-${j}`).style.marginTop && 
-                document.getElementById(`sp-${i}`).style.marginLeft === document.getElementById(`tile-${j}`).style.marginLeft){
-                    occupied = true
+        setTimeout(function(){
+            //  \/  check for free space  \/
+            for(let i = 1; i < 26; i++){
+                let occupied = false
+                for(let j = 1; j < 25; j++){
+                    if(document.getElementById(`sp-${i}`).style.marginTop === document.getElementById(`tile-${j}`).style.marginTop && 
+                    document.getElementById(`sp-${i}`).style.marginLeft === document.getElementById(`tile-${j}`).style.marginLeft){
+                        occupied = true
+                    }
+                }
+                if(occupied === false){
+                    window.space = document.getElementById(`sp-${i}`)
                 }
             }
-            if(occupied === false){
-                let space = document.getElementById(`sp-${i}`)
-                console.log(`sp-${i}`)
+            //  /\  check for free space  /\
+
+            let ydir = space.style.marginTop
+            let y = space.style.marginTop
+            y = y.split('')
+            y.pop()
+            y.pop()
+            y = y.join('')
+            yplus = +y+100+'px'
+            yminus = +y-100+'px'
+
+
+            let xdir = space.style.marginLeft
+            let x = space.style.marginLeft
+            x = x.split('')
+            x.pop()
+            x.pop()
+            x = x.join('')
+            xplus = +x+100+'px'
+            xminus = +x-100+'px'
+
+            //  \/  locate tiles around space  \/
+            let dir = []
+            for(let j = 1; j < 25; j++){
+                if(yminus === document.getElementById(`tile-${j}`).style.marginTop && space.style.marginLeft === document.getElementById(`tile-${j}`).style.marginLeft){
+                    dir.push('up')
+                }
+                if(yplus === document.getElementById(`tile-${j}`).style.marginTop && space.style.marginLeft === document.getElementById(`tile-${j}`).style.marginLeft){
+                    dir.push('down')
+                }
+                if(xplus === document.getElementById(`tile-${j}`).style.marginLeft && space.style.marginTop === document.getElementById(`tile-${j}`).style.marginTop){
+                    dir.push('right')
+                }
+                if(xminus === document.getElementById(`tile-${j}`).style.marginLeft && space.style.marginTop === document.getElementById(`tile-${j}`).style.marginTop){
+                    dir.push('left')
+                }
             }
-        }
-        //  /\  check for free space  /\
+            //  /\  locate tiles around space  /\
 
-        // for(let i = 1; i < 26; i++){
-        //     for(let j = 1; j < 25; j++){
-
-        //     }
-        // }
+            //  \/  select and move tile  \/
+            num = Math.floor(Math.random()*dir.length)
+            for(let j = 1; j < 25; j++){
+                if(dir[num] === 'up'){
+                    if(yminus === document.getElementById(`tile-${j}`).style.marginTop && space.style.marginLeft === document.getElementById(`tile-${j}`).style.marginLeft){
+                        document.getElementById(`tile-${j}`).style.marginTop = ydir
+                    }
+                }
+                if(dir[num] === 'down'){
+                    if(yplus === document.getElementById(`tile-${j}`).style.marginTop && space.style.marginLeft === document.getElementById(`tile-${j}`).style.marginLeft){
+                        document.getElementById(`tile-${j}`).style.marginTop = ydir
+                    }
+                }
+                if(dir[num] === 'left'){
+                    if(xminus === document.getElementById(`tile-${j}`).style.marginLeft && space.style.marginTop === document.getElementById(`tile-${j}`).style.marginTop){
+                        document.getElementById(`tile-${j}`).style.marginLeft = xdir
+                    }
+                }
+                if(dir[num] === 'right'){
+                    if(xplus === document.getElementById(`tile-${j}`).style.marginLeft && space.style.marginTop === document.getElementById(`tile-${j}`).style.marginTop){
+                        document.getElementById(`tile-${j}`).style.marginLeft = xdir
+                    }
+                }
+            }
+            //  /\  select and move tile  /\
+        }, 1000)
     }
 }
 //  /\  shuffle  /\
+
