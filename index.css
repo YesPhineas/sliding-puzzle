@@ -4,19 +4,37 @@
     cursor: default;
 }
 
-#button-bill{
-    height: 100px;
+#puzzles{
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#board{
+#button-bill{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#board5x5{
     width: 500px;
     height: 500px;
     background: green;
     border: 5px solid black;
     margin: auto auto;
+    visibility: hidden;
+}
+
+#board3x3{
+    width: 300px;
+    height: 300px;
+    background: green;
+    border: 5px solid black;
+    margin: auto auto;
+    margin-top: -400px;
+    visibility: hidden;
 }
 
 .tile{
@@ -32,7 +50,7 @@
 .space{
     width: 100px;
     height: 100px;
-    background: rgb(0, 0, 0);
+    background: black;
     position: absolute;
 }
 
