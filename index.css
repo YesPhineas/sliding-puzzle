@@ -40,8 +40,10 @@
 .tile{
     width: 100px;
     height: 100px;
-    background: blue;
-    box-shadow: inset 0px 0px 20px 0px rgb(20, 2, 119);
+    /* background: rgb(12, 136, 194); */
+    background: rgb(66, 76, 101);
+    /* box-shadow: inset 0px 0px 20px 0px rgb(40, 90, 165); */
+    box-shadow: inset 0px 0px 20px 0px rgb(42, 51, 72);
     position: absolute;
     text-align: center;
     font-size: 85px;
@@ -50,7 +52,8 @@
 .space{
     width: 100px;
     height: 100px;
-    background: black;
+    /* background: black; */
+    background: rgb(26, 37, 64);
     position: absolute;
 }
 
