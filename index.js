@@ -1,4 +1,4 @@
-let board = (board) => {
+let boardFn = (board) => {
     window.boardList = ['board5x5', 'board3x3']
     for(let i = 0; i < boardList.length; i++){
         if(boardList[i] === board){
@@ -62,7 +62,7 @@ let board = (board) => {
         }
 
         if(i < 4){
-            console.log('sup')
+            
             document.getElementById(`tile-3-${i}`).style.marginTop = '0px'
             document.getElementById(`sp-3-${i}`).style.marginTop = '0px'
         }else if(i < 7){
@@ -70,6 +70,8 @@ let board = (board) => {
             document.getElementById(`sp-3-${i}`).style.marginTop = '100px'
         }else if(i < 9){
             document.getElementById(`tile-3-${i}`).style.marginTop = '200px'
+            document.getElementById(`sp-3-${i}`).style.marginTop = '200px'
+        }else if(i === 9){
             document.getElementById(`sp-3-${i}`).style.marginTop = '200px'
         }
 
@@ -89,11 +91,6 @@ let board = (board) => {
     //  /\  3x3 board setup  /\
     //  /\  setup stuff  /\
 }
-
-
-
-
-
 
 //  \/  movement  \/
 let move = (tile, spnum, sp, id) => {
@@ -180,7 +177,7 @@ let move = (tile, spnum, sp, id) => {
 
 //  \/  shuffle  \/
 let shuffle = (x) =>{
-    for(let i = 0; i< boardList.length-1; i++){
+    for(let i = 0; i< boardList.length; i++){
         if(document.getElementById(boardList[i]).style.visibility === 'visible'){
             window.map = boardList[i]
         }
@@ -199,7 +196,7 @@ let shuffle = (x) =>{
             //  \/  check for free space  \/
             for(let i = 1; i < sspnum+1; i++){
                 let occupied = false
-                for(let j = 1; j < 25; j++){
+                for(let j = 1; j < sspnum; j++){
                     if(document.getElementById(ssp+i).style.marginTop === document.getElementById(sid+j).style.marginTop && 
                     document.getElementById(ssp+i).style.marginLeft === document.getElementById(sid+j).style.marginLeft){
                         occupied = true
