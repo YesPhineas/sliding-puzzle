@@ -57,9 +57,9 @@ let boardFn = (board) => {
     //  \/  3x3 board setup  \/
     for(let i = 1; i < 10; i++){
 
-        if(i < 9){
-            document.getElementById(`tile-3-${i}`).innerHTML = i
-        }
+        // if(i < 9){
+        //     document.getElementById(`tile-3-${i}`).innerHTML = i
+        // }
 
         if(i < 4){
             

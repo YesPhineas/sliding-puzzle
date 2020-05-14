@@ -61,3 +61,63 @@
     color: none;
     background: none;
 }
+
+#img-1{
+    width: 300px;
+    height: 300px;
+    
+    clip-path: inset(0 66.66% 66.66% 0);
+}
+
+#img-2{
+    width: 300px;
+    height: 300px;
+    margin-left: -100px;
+    clip-path: inset(0 33.33% 66.66% 33.33%);
+}
+
+#img-3{
+    width: 300px;
+    height: 300px;
+    margin-left: -200px;
+    clip-path: inset(0 0 66.66% 66.66%);
+    
+}
+
+#img-4{
+    width: 300px;
+    height: 300px;
+    margin-top: -100px;
+    clip-path: inset(33.33% 66.66% 33.33% 0);
+}
+
+#img-5{
+    width: 300px;
+    height: 300px;
+    margin-top: -100px;
+    margin-left: -100px;
+    clip-path: inset(33.33% 33.33% 33.33% 33.33%);
+}
+
+#img-6{
+    width: 300px;
+    height: 300px;
+    margin-top: -100px;
+    margin-left: -200px;
+    clip-path: inset(33.33% 0 33.33% 66.66%);
+}
+
+#img-7{
+    width: 300px;
+    height: 300px;
+    margin-top: -200px;
+    clip-path: inset(66.66% 66.66% 0 0);
+}
+
+#img-8{
+    width: 300px;
+    height: 300px;
+    margin-top: -200px;
+    margin-left: -100px;
+    clip-path: inset(66.66% 33.33% 0 33.33%);
+}
