@@ -145,3 +145,174 @@
 img{
     -webkit-user-drag: none;
 }
+
+
+
+#img-d-1{
+    height: 500px;
+    width: 500px;
+    margin-top:0px;
+    margin-left:0px;
+    clip-path: inset(0% 80% 80% 0%)
+}
+#img-d-2{
+    height: 500px;
+    width: 500px;
+    margin-top:0px;
+    margin-left:-100px;
+    clip-path: inset(0% 60% 80% 20%)
+}
+#img-d-3{
+    height: 500px;
+    width: 500px;
+    margin-top:0px;
+    margin-left:-200px;
+    clip-path: inset(0% 40% 80% 40%)
+}
+#img-d-4{
+    height: 500px;
+    width: 500px;
+    margin-top:0px;
+    margin-left:-300px;
+    clip-path: inset(0% 20% 80% 60%)
+}
+#img-d-5{
+    height: 500px;
+    width: 500px;
+    margin-top:0px;
+    margin-left:-400px;
+    clip-path: inset(0% 0% 80% 80%)
+}
+#img-d-6{
+    height: 500px;
+    width: 500px;
+    margin-top:-100px;
+    margin-left:0px;
+    clip-path: inset(20% 80% 60% 0%)
+}
+#img-d-7{
+    height: 500px;
+    width: 500px;
+    margin-top:-100px;
+    margin-left:-100px;
+    clip-path: inset(20% 60% 60% 20%)
+}
+#img-d-8{
+    height: 500px;
+    width: 500px;
+    margin-top:-100px;
+    margin-left:-200px;
+    clip-path: inset(20% 40% 60% 40%)
+}
+#img-d-9{
+    height: 500px;
+    width: 500px;
+    margin-top:-100px;
+    margin-left:-300px;
+    clip-path: inset(20% 20% 60% 60%)
+}
+#img-d-10{
+    height: 500px;
+    width: 500px;
+    margin-top:-100px;
+    margin-left:-400px;
+    clip-path: inset(20% 0% 60% 80%)
+}
+#img-d-11{
+    height: 500px;
+    width: 500px;
+    margin-top:-200px;
+    margin-left:0px;
+    clip-path: inset(40% 80% 40% 0%)
+}
+#img-d-12{
+    height: 500px;
+    width: 500px;
+    margin-top:-200px;
+    margin-left:-100px;
+    clip-path: inset(40% 60% 40% 20%)
+}
+#img-d-13{
+    height: 500px;
+    width: 500px;
+    margin-top:-200px;
+    margin-left:-200px;
+    clip-path: inset(40% 40% 40% 40%)
+}
+#img-d-14{
+    height: 500px;
+    width: 500px;
+    margin-top:-200px;
+    margin-left:-300px;
+    clip-path: inset(40% 20% 40% 60%)
+}
+#img-d-15{
+    height: 500px;
+    width: 500px;
+    margin-top:-200px;
+    margin-left:-400px;
+    clip-path: inset(40% 0% 40% 80%)
+}
+#img-d-16{
+    height: 500px;
+    width: 500px;
+    margin-top:-300px;
+    margin-left:0px;
+    clip-path: inset(60% 80% 20% 0%)
+}
+#img-d-17{
+    height: 500px;
+    width: 500px;
+    margin-top:-300px;
+    margin-left:-100px;
+    clip-path: inset(60% 60% 20% 20%)
+}
+#img-d-18{
+    height: 500px;
+    width: 500px;
+    margin-top:-300px;
+    margin-left:-200px;
+    clip-path: inset(60% 40% 20% 40%)
+}
+#img-d-19{
+    height: 500px;
+    width: 500px;
+    margin-top:-300px;
+    margin-left:-300px;
+    clip-path: inset(60% 20% 20% 60%)
+}
+#img-d-20{
+    height: 500px;
+    width: 500px;
+    margin-top:-300px;
+    margin-left:-400px;
+    clip-path: inset(60% 0% 20% 80%)
+}
+#img-d-21{
+    height: 500px;
+    width: 500px;
+    margin-top:-400px;
+    margin-left:0px;
+    clip-path: inset(80% 80% 0% 0%)
+}
+#img-d-22{
+    height: 500px;
+    width: 500px;
+    margin-top:-400px;
+    margin-left:-100px;
+    clip-path: inset(80% 60% 0% 20%)
+}
+#img-d-23{
+    height: 500px;
+    width: 500px;
+    margin-top:-400px;
+    margin-left:-200px;
+    clip-path: inset(80% 40% 0% 40%)
+}
+#img-d-24{
+    height: 500px;
+    width: 500px;
+    margin-top:-400px;
+    margin-left:-300px;
+    clip-path: inset(80% 20% 0% 60%)
+}
