@@ -1,5 +1,5 @@
 let boardFn = (board) => {
-    window.boardList = ['board5x5', 'board3x3']
+    window.boardList = ['board5x5', 'board3x3', 'board5x5num', 'board3x3num']
     for(let i = 0; i < boardList.length; i++){
         if(boardList[i] === board){
             document.getElementById(boardList[i]).style.visibility = 'visible'
@@ -8,13 +8,89 @@ let boardFn = (board) => {
         }
     }
     //  \/  setup stuff  \/
-    //  \/  5x5 board setup  \/
+    //  \/  5x5 board number setup  \/
     for(let i = 1; i < 26; i++){
 
         if(i < 25){
-            document.getElementById(`tile-5-${i}`).innerHTML = i
+            document.getElementById(`tile-5-n-${i}`).innerHTML = i
         }
 
+        if(i < 6){
+            document.getElementById(`tile-5-n-${i}`).style.marginTop = '0px'
+            document.getElementById(`sp-5-n-${i}`).style.marginTop = '0px'
+        }else if(i < 11){
+            document.getElementById(`tile-5-n-${i}`).style.marginTop = '100px'
+            document.getElementById(`sp-5-n-${i}`).style.marginTop = '100px'
+        }else if(i < 16){
+            document.getElementById(`tile-5-n-${i}`).style.marginTop = '200px'
+            document.getElementById(`sp-5-n-${i}`).style.marginTop = '200px'
+        }else if(i < 21){
+            document.getElementById(`tile-5-n-${i}`).style.marginTop = '300px'
+            document.getElementById(`sp-5-n-${i}`).style.marginTop = '300px'
+        }else if(i < 25){
+            document.getElementById(`tile-5-n-${i}`).style.marginTop = '400px'
+            document.getElementById(`sp-5-n-${i}`).style.marginTop = '400px'
+        }else if(i === 25){
+            document.getElementById(`sp-5-n-${i}`).style.marginTop = '400px'
+        }
+
+        if(i === 1 || i === 6 || i === 11 || i === 16 || i === 21){
+            document.getElementById(`tile-5-n-${i}`).style.marginLeft = '0px'
+            document.getElementById(`sp-5-n-${i}`).style.marginLeft = '0px'
+        }else if(i === 2 || i === 7 || i === 12 || i === 17 || i === 22){
+            document.getElementById(`tile-5-n-${i}`).style.marginLeft = '100px'
+            document.getElementById(`sp-5-n-${i}`).style.marginLeft = '100px'
+        }else if(i === 3 || i === 8 || i === 13 || i === 18 || i === 23){
+            document.getElementById(`tile-5-n-${i}`).style.marginLeft = '200px'
+            document.getElementById(`sp-5-n-${i}`).style.marginLeft = '200px'
+        }else if(i === 4 || i === 9 || i === 14 || i === 19 || i === 24){
+            document.getElementById(`tile-5-n-${i}`).style.marginLeft = '300px'
+            document.getElementById(`sp-5-n-${i}`).style.marginLeft = '300px'
+        }else if(i === 5 || i === 10 || i === 15 || i === 20){
+            document.getElementById(`tile-5-n-${i}`).style.marginLeft = '400px'
+            document.getElementById(`sp-5-n-${i}`).style.marginLeft = '400px'
+        }else if(i === 25){
+            document.getElementById(`sp-5-n-${i}`).style.marginLeft = '400px'
+        }
+    }
+    //  /\  5x5 board number setup  /\
+    //  \/  3x3 board number setup  \/
+    for(let i = 1; i < 10; i++){
+
+        if(i < 9){
+            document.getElementById(`tile-3-n-${i}`).innerHTML = i
+        }
+
+        if(i < 4){
+            
+            document.getElementById(`tile-3-n-${i}`).style.marginTop = '0px'
+            document.getElementById(`sp-3-n-${i}`).style.marginTop = '0px'
+        }else if(i < 7){
+            document.getElementById(`tile-3-n-${i}`).style.marginTop = '100px'
+            document.getElementById(`sp-3-n-${i}`).style.marginTop = '100px'
+        }else if(i < 9){
+            document.getElementById(`tile-3-n-${i}`).style.marginTop = '200px'
+            document.getElementById(`sp-3-n-${i}`).style.marginTop = '200px'
+        }else if(i === 9){
+            document.getElementById(`sp-3-n-${i}`).style.marginTop = '200px'
+        }
+
+        if(i === 1 || i === 4 || i === 7){
+            document.getElementById(`tile-3-n-${i}`).style.marginLeft = '0px'
+            document.getElementById(`sp-3-n-${i}`).style.marginLeft = '0px'
+        }else if(i === 2 || i === 5 || i === 8){
+            document.getElementById(`tile-3-n-${i}`).style.marginLeft = '100px'
+            document.getElementById(`sp-3-n-${i}`).style.marginLeft = '100px'
+        }else if(i === 3 || i === 6){
+            document.getElementById(`tile-3-n-${i}`).style.marginLeft = '200px'
+            document.getElementById(`sp-3-n-${i}`).style.marginLeft = '200px'
+        }else if(i === 9){
+            document.getElementById(`sp-3-n-${i}`).style.marginLeft = '200px'
+        }
+    }
+    //  /\  3x3 board number setup  /\
+    //  \/  5x5 board setup  \/
+    for(let i = 1; i < 26; i++){
         if(i < 6){
             document.getElementById(`tile-5-${i}`).style.marginTop = '0px'
             document.getElementById(`sp-5-${i}`).style.marginTop = '0px'
@@ -56,10 +132,6 @@ let boardFn = (board) => {
     //  /\  5x5 board setup  /\
     //  \/  3x3 board setup  \/
     for(let i = 1; i < 10; i++){
-
-        // if(i < 9){
-        //     document.getElementById(`tile-3-${i}`).innerHTML = i
-        // }
 
         if(i < 4){
             
@@ -190,6 +262,14 @@ let shuffle = (x) =>{
         window.sspnum = 9
         window.ssp = 'sp-3-'
         window.sid = 'tile-3-'
+    }else if(map === 'board5x5num'){
+        window.sspnum = 25
+        window.ssp = 'sp-5-n-'
+        window.sid = 'tile-5-n-'
+    }else if(map === 'board3x3num'){
+        window.sspnum = 9
+        window.ssp = 'sp-3-n-'
+        window.sid = 'tile-3-n-'
     }
     for(let a = 0; a < x; a++){
         setTimeout(function(){

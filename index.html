@@ -8,13 +8,90 @@
 </head>
 <body>
     <section id='puzzles'>
+        <button id='button-5-n' onclick='boardFn(`board5x5num`)'>5x5 number</button>
+        <button id='button-3-n' onclick='boardFn(`board3x3num`)'>3x3 number</button>
         <button id='button-5' onclick='boardFn(`board5x5`)'>5x5</button>
         <button id='button-3' onclick='boardFn(`board3x3`)'>3x3</button>
     </section>
     <section id='button-bill'>
         <button id='shuffle-button' onclick='shuffle(1000)'>shuffle</button>
     </section>
-    <!-- \/  5x5 board  \/ -->
+    <!-- \/  5x5num board  \/ -->
+    <section class='board' id='board5x5num'>
+        <div class='space' id=sp-5-n-1></div>
+        <div class='space' id=sp-5-n-2></div>
+        <div class='space' id=sp-5-n-3></div>
+        <div class='space' id=sp-5-n-4></div>
+        <div class='space' id=sp-5-n-5></div>
+        <div class='space' id=sp-5-n-6></div>
+        <div class='space' id=sp-5-n-7></div>
+        <div class='space' id=sp-5-n-8></div>
+        <div class='space' id=sp-5-n-9></div>
+        <div class='space' id=sp-5-n-10></div>
+        <div class='space' id=sp-5-n-11></div>
+        <div class='space' id=sp-5-n-12></div>
+        <div class='space' id=sp-5-n-13></div>
+        <div class='space' id=sp-5-n-14></div>
+        <div class='space' id=sp-5-n-15></div>
+        <div class='space' id=sp-5-n-16></div>
+        <div class='space' id=sp-5-n-17></div>
+        <div class='space' id=sp-5-n-18></div>
+        <div class='space' id=sp-5-n-19></div>
+        <div class='space' id=sp-5-n-20></div>
+        <div class='space' id=sp-5-n-21></div>
+        <div class='space' id=sp-5-n-22></div>
+        <div class='space' id=sp-5-n-23></div>
+        <div class='space' id=sp-5-n-24></div>
+        <div class='space' id=sp-5-n-25></div>
+
+        <div class='tile' id='tile-5-n-1' onclick='move(this.id, 25, `sp-5-n-`, `tile-5-n-`)'></div>
+        <div class='tile' id='tile-5-n-2' onclick='move(this.id, 25, `sp-5-n-`, `tile-5-n-`)'></div>
+        <div class='tile' id='tile-5-n-3' onclick='move(this.id, 25, `sp-5-n-`, `tile-5-n-`)'></div>
+        <div class='tile' id='tile-5-n-4' onclick='move(this.id, 25, `sp-5-n-`, `tile-5-n-`)'></div>
+        <div class='tile' id='tile-5-n-5' onclick='move(this.id, 25, `sp-5-n-`, `tile-5-n-`)'></div>
+        <div class='tile' id='tile-5-n-6' onclick='move(this.id, 25, `sp-5-n-`, `tile-5-n-`)'></div>
+        <div class='tile' id='tile-5-n-7' onclick='move(this.id, 25, `sp-5-n-`, `tile-5-n-`)'></div>
+        <div class='tile' id='tile-5-n-8' onclick='move(this.id, 25, `sp-5-n-`, `tile-5-n-`)'></div>
+        <div class='tile' id='tile-5-n-9' onclick='move(this.id, 25, `sp-5-n-`, `tile-5-n-`)'></div>
+        <div class='tile' id='tile-5-n-10' onclick='move(this.id, 25, `sp-5-n-`, `tile-5-n-`)'></div>
+        <div class='tile' id='tile-5-n-11' onclick='move(this.id, 25, `sp-5-n-`, `tile-5-n-`)'></div>
+        <div class='tile' id='tile-5-n-12' onclick='move(this.id, 25, `sp-5-n-`, `tile-5-n-`)'></div>
+        <div class='tile' id='tile-5-n-13' onclick='move(this.id, 25, `sp-5-n-`, `tile-5-n-`)'></div>
+        <div class='tile' id='tile-5-n-14' onclick='move(this.id, 25, `sp-5-n-`, `tile-5-n-`)'></div>
+        <div class='tile' id='tile-5-n-15' onclick='move(this.id, 25, `sp-5-n-`, `tile-5-n-`)'></div>
+        <div class='tile' id='tile-5-n-16' onclick='move(this.id, 25, `sp-5-n-`, `tile-5-n-`)'></div>
+        <div class='tile' id='tile-5-n-17' onclick='move(this.id, 25, `sp-5-n-`, `tile-5-n-`)'></div>
+        <div class='tile' id='tile-5-n-18' onclick='move(this.id, 25, `sp-5-n-`, `tile-5-n-`)'></div>
+        <div class='tile' id='tile-5-n-19' onclick='move(this.id, 25, `sp-5-n-`, `tile-5-n-`)'></div>
+        <div class='tile' id='tile-5-n-20' onclick='move(this.id, 25, `sp-5-n-`, `tile-5-n-`)'></div>
+        <div class='tile' id='tile-5-n-21' onclick='move(this.id, 25, `sp-5-n-`, `tile-5-n-`)'></div>
+        <div class='tile' id='tile-5-n-22' onclick='move(this.id, 25, `sp-5-n-`, `tile-5-n-`)'></div>
+        <div class='tile' id='tile-5-n-23' onclick='move(this.id, 25, `sp-5-n-`, `tile-5-n-`)'></div>
+        <div class='tile' id='tile-5-n-24' onclick='move(this.id, 25, `sp-5-n-`, `tile-5-n-`)'></div>
+    </section>
+    <!-- /\  5x5num board  /\ -->
+    <!-- \/  3x3num board  \/ -->
+    <section class='board' id='board3x3num'>
+        <div class='space' id=sp-3-n-1></div>
+        <div class='space' id=sp-3-n-2></div>
+        <div class='space' id=sp-3-n-3></div>
+        <div class='space' id=sp-3-n-4></div>
+        <div class='space' id=sp-3-n-5></div>
+        <div class='space' id=sp-3-n-6></div>
+        <div class='space' id=sp-3-n-7></div>
+        <div class='space' id=sp-3-n-8></div>
+        <div class='space' id=sp-3-n-9></div>
+
+        <div class='tile' id='tile-3-n-1' onclick='move(this.id, 9, `sp-3-n-`, `tile-3-n-`)'></div>
+        <div class='tile' id='tile-3-n-2' onclick='move(this.id, 9, `sp-3-n-`, `tile-3-n-`)'></div>
+        <div class='tile' id='tile-3-n-3' onclick='move(this.id, 9, `sp-3-n-`, `tile-3-n-`)'></div>
+        <div class='tile' id='tile-3-n-4' onclick='move(this.id, 9, `sp-3-n-`, `tile-3-n-`)'></div>
+        <div class='tile' id='tile-3-n-5' onclick='move(this.id, 9, `sp-3-n-`, `tile-3-n-`)'></div>
+        <div class='tile' id='tile-3-n-6' onclick='move(this.id, 9, `sp-3-n-`, `tile-3-n-`)'></div>
+        <div class='tile' id='tile-3-n-7' onclick='move(this.id, 9, `sp-3-n-`, `tile-3-n-`)'></div>
+        <div class='tile' id='tile-3-n-8' onclick='move(this.id, 9, `sp-3-n-`, `tile-3-n-`)'></div>
+    </section>
+    <!-- /\  3x3num board  /\ -->
     <section class='board' id='board5x5'>
         <div class='space' id=sp-5-1></div>
         <div class='space' id=sp-5-2></div>
